@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto&display=swap');/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        4.3 Work
+        4.4 Services
+        4.5 Form
+        4.6 Footer
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black-standard: #0C0C0C;
+    --lightpurple: #F2F0FF;
+    --lightgrey-background: #F3F6F9;
+    --grey-service-tile: #7A7A7A;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+button {
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    margin: 20px 0;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*border: 2px solid black;*/
+}
+
+.inner-container {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+
+/* --------------- 3.2 Other --------------------------- */
+
+a,
+a:visited,
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--pink);
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+img {
+    width: 100%;
+}
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+.nav-bar-section {
+    background-color: var(--blue);
+}
+
+.header-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.header-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 400px;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.header-section {
+    background: rgb(87,34,205);
+    background: linear-gradient(311deg, rgba(87,34,205,1) 0%, rgba(72,69,228,1) 35%);
+}
+
+.header-content-text {
+    text-align: center;
+    color: #fff;
+    width: 680px;
+    margin: 50px;
+}
+
+.header-section img {
+    width: 60px;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.hello-section {
+    background-color: #fff;
+}
+
+.hello-section-text {
+    width: 680px;
+    text-align: center;
+    color: var(--purple);
+    margin: 50px;
+}
+
+.hello-section-text h2 {
+    padding: 20px;
+}
+
+.hello-section-text p {
+    color: var(--black-standard);
+    padding-top: 30px;
+}
+
+.hello-section-text a {
+    color: var(--purple);
+}
+
+/* --------------4.3 Work -------------*/
+
+.work-section {
+    background-color: var(--lightgrey-background);
+}
+
+.work-section-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 36px 0;
+}
+
+.work-section-text {
+    flex-basis: 350px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.work-section-text a {
+    color: var(--purple);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.work-section-text p {
+    padding: 24px 0;
+}
+.work-section-text h3 {
+    padding: 15px 0;
+}
+.work-section-image {
+    flex-basis: 800px;
+    }
+
+.work-section-image img {
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.squiggle-line {
+    width: 35px;
+}
+
+.variety-article {
+    flex-direction: row-reverse;
+}
+
+/* ------------ 4.4 Services -----------------*/
+
+.services-section {
+    background-color: #fff;
+}
+
+.service-section-article {
+    border: 2px solid var(--purple);
+    flex-basis: 344px;
+    padding: 24px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.15);
+    color: var(--grey-service-tile);
+}
+
+.service-section-article h3 {
+    color: var(--purple);
+}
+
+.service-section-article img {
+    width: 55px;
+    margin: 0 0 8px 0;
+}
+
+.inner-container__service-section {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    margin: 100px 20px;
+    }
+
+/* -------------4.5 Form --------------------*/
+
+.form-section {
+    background: rgb(87,34,205);
+    background: linear-gradient(311deg, rgba(87,34,205,1) 0%, rgba(72,69,228,1) 35%);
+}
+
+.inner-container__contact-form {
+    flex-basis: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.form-section-text {
+    width: 680px;
+    text-align: center;
+    color: #fff;
+    margin: 50px;
+}
+
+.form-section-text h2 {
+    font-size: 2.5em;
+}
+
+form p {
+    text-align: left;
+    margin: 0;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 26px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 26px;
+    height: 150px;
+}
+
+::placeholder {
+    font-family: Roboto, sans-serif;
+
+}
+
+/*--------------4.6 Footer --------------------*/
+
+.footer-section {
+    background-color: #0C0C0C;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 8px;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
