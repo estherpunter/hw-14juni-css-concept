@@ -58,7 +58,6 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*border: 2px solid black;*/
 }
 
 .inner-container {
@@ -120,6 +119,7 @@ img {
 .header-section {
     background: rgb(87,34,205);
     background: linear-gradient(311deg, rgba(87,34,205,1) 0%, rgba(72,69,228,1) 35%);
+    position: relative;
 }
 
 .header-content-text {
@@ -132,6 +132,15 @@ img {
 .header-section img {
     width: 60px;
 }
+
+.header-section-triangle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-right: 1700px solid transparent;
+    border-bottom: 40px solid #fff;
+}
+
 
 /* --------------- 4.2 Introduction ------------------- */
 
@@ -186,6 +195,21 @@ img {
     font-weight: bold;
 }
 
+.work-section-text a::after {
+    display: inline-block;
+    content: "";
+    width: 3%;
+    height: 1px;
+    margin-left: 10px;
+    background-color: var(--purple);
+}
+
+.work-section-text a:hover::after {
+    width: 20%;
+    transition: width .30s linear ;
+}
+
+
 .work-section-text p {
     padding: 24px 0;
 }
@@ -212,6 +236,7 @@ img {
 
 .services-section {
     background-color: #fff;
+    position: relative;
 }
 
 .service-section-article {
@@ -240,6 +265,16 @@ img {
     row-gap: 50px;
     margin: 100px 20px;
     }
+
+.service-section-triangle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-right: 1700px solid transparent;
+    border-bottom: 40px solid var(--blue);
+
+}
+
 
 /* -------------4.5 Form --------------------*/
 
